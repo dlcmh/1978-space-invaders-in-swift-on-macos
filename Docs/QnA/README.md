@@ -10,6 +10,7 @@ file. When dates are equal, the most recently added question comes first.
 
 | Question | Last updated | Covers |
 | --- | --- | --- |
+| [How do I tell whether the game's CPU and memory use is acceptable?](judging-cpu-and-memory-use.md) | 2026-10-20 | The 60 Hz frame budget, why rendering dominates CPU, what holds the 150 MB, and the stability, scaling, and frame-rate checks that decide it |
 | [How is SpaceInvadersCore structured, and why is the simulation headless?](spaceinvaderscore-architecture.md) | 2026-10-20 | The core/presentation boundary, commands, read-only state, phases, and deterministic RNG |
 | [How does the invader formation march, and why does it speed up?](invader-march-and-acceleration.md) | 2026-10-20 | Formation stepping, edge drops, the acceleration formula, and wave tempo |
 | [How do the four bunkers take damage?](destructible-bunkers.md) | 2026-10-20 | Cell grids, projectile impacts, invader erosion, and wave restoration |
