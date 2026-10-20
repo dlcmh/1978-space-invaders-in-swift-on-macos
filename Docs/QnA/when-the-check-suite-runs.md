@@ -95,7 +95,8 @@ Two details worth knowing:
   count. Both must appear; a failure anywhere exits before its print.
 - **The count is executions, not call sites.** There are about 66 `check(...)`
   call sites, but 23,116 executions, because `check` is called inside the soak's
-  3,600-tick update loop. Roughly 23,000 of the count come from that one loop.
+  3,600-tick update loop. Roughly 23,000 of the count come from that one loop;
+  see [What "23,116 checks" counts](how-spaceinvaderschecks-works.md#what-23116-checks-counts).
 
 ### Why not at app launch
 

@@ -86,6 +86,35 @@ The compensating controls are review and the documented invariants in
 [`AGENTS.md`](../../AGENTS.md#gameplay-invariants): when a rule changes, the
 author is expected to add or update the scenario that asserts it.
 
+### What "23,116 checks" counts
+
+It is the final value of the `checks` variable: the number of times `check` was
+evaluated, not the number of distinct behaviours and not a share of the core
+exercised.
+
+| Source | Executions |
+| --- | --- |
+| Fixed scenarios: structure, movement, firing, bunkers, pause, mystery, death | a few dozen |
+| 60-second soak, 3,600 ticks | roughly 23,000 |
+| Wave-clear autopilot | 7 |
+
+The soak accounts for over 99% of the total because it asserts several
+invariants on every tick: coordinates are finite, the cannon stays on its rails,
+no more than three bombs are in flight, and any live bullet has a finite `y`.
+
+Two consequences:
+
+- **The number barely moves when coverage improves.** A new scenario with three
+  assertions changes it by three. It is a liveness signal — the suite ran to the
+  end and did not fail — not a quality score, and it should never be quoted as
+  evidence of breadth.
+- **The published count drifts.** Editing a scenario or a loop length changes
+  it, so documentation should treat the exact value as current-at-this-commit
+  rather than as a target to preserve.
+
+For the same reason, comparing counts between branches says nothing: a branch
+with 23,200 checks is not better than one with 23,116.
+
 ### Adding a scenario
 
 Append statements beside the block they belong to, or at the end before the
