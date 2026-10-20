@@ -554,7 +554,7 @@ final class Renderer {
             pixelSize: 1.5, color: Palette.hudDim, alignment: .center)
 
         font.draw(
-            "ARROWS / A D  MOVE     SPACE  FIRE     P  PAUSE     M  \(isMuted ? "SOUND OFF" : "MUTE")",
+            "ARROWS / A D  MOVE     SPACE  FIRE     P  PAUSE     M  \(isMuted ? "SOUND OFF" : "MUTE")     F  FULL SCREEN",
             x: Self.designWidth * 0.5, y: Self.designHeight - 28, pixelSize: 1.25,
             color: Palette.hudFaint, alignment: .center)
     }
@@ -634,7 +634,8 @@ final class Renderer {
             "ARROWS / A D TO MOVE       SPACE TO FIRE", x: Self.designWidth * 0.5, y: 812,
             pixelSize: 1.55, color: Palette.hud, alignment: .center)
         font.draw(
-            "P PAUSE      M MUTE      ESC PAUSE", x: Self.designWidth * 0.5, y: 842,
+            "P PAUSE      M MUTE      F FULL SCREEN      ESC PAUSE / EXIT FULL SCREEN",
+            x: Self.designWidth * 0.5, y: 842,
             pixelSize: 1.35, color: Palette.hudDim, alignment: .center)
         font.draw(
             "55 INVADERS. FOUR SHIELDS. ONE CANNON.", x: Self.designWidth * 0.5, y: 882,

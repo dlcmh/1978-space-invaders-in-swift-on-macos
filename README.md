@@ -40,13 +40,14 @@ Requires macOS 13 or newer and a Mac with Metal support. The project builds with
 | Space | Fire (one shot in flight, as in 1978) |
 | Return / Space | Start game / play again |
 | P | Pause / resume |
-| Esc | Pause |
+| Esc | Pause; exits full screen when already full screen |
 | M | Mute / unmute |
+| F | Enter / leave full screen |
 | ⌘N | New game |
 | ⌘P / ⌘M | Pause / mute (menu shortcuts) |
-| ⌃⌘F | Toggle full screen |
+| ⌃⌘F | Toggle full screen (menu shortcut) |
 
-The window is resizable and keeps the portrait arcade aspect ratio. Sound can be muted at any time and the setting is remembered.
+The window is resizable and keeps the portrait arcade aspect ratio. Full screen letterboxes the same way, and F or Esc leaves it. Sound can be muted at any time and the setting is remembered.
 
 ## What is implemented
 

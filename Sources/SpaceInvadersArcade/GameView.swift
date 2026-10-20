@@ -147,14 +147,24 @@ final class GameView: MTKView, MTKViewDelegate {
             } else {
                 game.fire()
             }
+        case 3:
+            if !event.isARepeat {
+                toggleFullscreen()
+            }
         case 35:
             game.togglePause()
             clearMovement()
         case 46:
             toggleMute()
         case 53:
-            game.pause()
-            clearMovement()
+            if isFullScreen {
+                if !event.isARepeat {
+                    toggleFullscreen()
+                }
+            } else {
+                game.pause()
+                clearMovement()
+            }
         default:
             guard let characters = event.charactersIgnoringModifiers?.lowercased() else {
                 return
@@ -198,6 +208,18 @@ final class GameView: MTKView, MTKViewDelegate {
     private func clearMovement() {
         game.setMovingLeft(false)
         game.setMovingRight(false)
+    }
+
+    private var isFullScreen: Bool {
+        window?.styleMask.contains(.fullScreen) ?? false
+    }
+
+    /// Enter or leave full screen without changing the game phase. The renderer
+    /// letterboxes to the new drawable size, so the arcade aspect is preserved.
+    private func toggleFullscreen() {
+        guard let window else { return }
+        clearMovement()
+        window.toggleFullScreen(nil)
     }
 
     func saveHighScore() {
