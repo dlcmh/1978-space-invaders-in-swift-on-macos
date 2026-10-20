@@ -1,0 +1,44 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "name": "Debug SpaceInvadersArcade",
+            "target": "SpaceInvadersArcade",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug SpaceInvadersArcade"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "name": "Release SpaceInvadersArcade",
+            "target": "SpaceInvadersArcade",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release SpaceInvadersArcade"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "name": "Debug SpaceInvadersChecks",
+            "target": "SpaceInvadersChecks",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug SpaceInvadersChecks"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "name": "Release SpaceInvadersChecks",
+            "target": "SpaceInvadersChecks",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release SpaceInvadersChecks"
+        }
+    ]
+}
