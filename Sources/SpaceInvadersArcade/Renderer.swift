@@ -130,13 +130,21 @@ final class Renderer {
         drawBackdrop()
         drawStars(game: game)
         drawPlayfieldFrame()
-        drawBunkers(game: game)
-        drawAliens(game: game)
-        drawMysteryShip(game: game)
-        drawProjectiles(game: game)
+        // The attract panel sits inside the playfield and is almost opaque, so
+        // leaving the formation or the shields underneath only leaks slivers of
+        // them past its edges. The dimmed starfield, cannon, and HUD remain.
+        let drawsPlayfield = game.phase != .attract
+        if drawsPlayfield {
+            drawBunkers(game: game)
+            drawAliens(game: game)
+            drawMysteryShip(game: game)
+            drawProjectiles(game: game)
+        }
         drawPlayer(game: game)
-        drawExplosions(game: game)
-        drawPopups(game: game)
+        if drawsPlayfield {
+            drawExplosions(game: game)
+            drawPopups(game: game)
+        }
         drawHUD(game: game)
         drawOverlays(game: game)
         drawScanlines()

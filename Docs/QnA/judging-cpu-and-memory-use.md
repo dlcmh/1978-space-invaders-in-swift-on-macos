@@ -164,9 +164,10 @@ vmmap -summary "$PID" | head -40      # IOSurface / graphics / malloc split
 sample "$PID" 10 -file /tmp/si.txt    # where the CPU time goes
 ```
 
-Run it once in attract mode and once while playing. Because rendering does not
-pause, the two readings should be close; a large gap means simulation, not
-presentation, is the cost.
+Run it once in attract mode and once while playing. Attract mode draws fewer
+sprites because the title panel hides the formation and shields, so compare the
+readings knowing its presentation cost is lower; a large gap beyond that means
+simulation, not presentation, is the cost.
 
 ### Bottom line
 

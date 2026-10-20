@@ -55,6 +55,7 @@ that a full autopilot clear reaches wave 2 with a restored formation.
 
 [`Renderer.swift`](../../Sources/SpaceInvadersArcade/Renderer.swift) —
 `drawAliens` chooses `animationFrame` while playing, and uses a slower
-time-based frame in attract and game-over screens. The two frames come from
-`SpriteArt.frames`, so the marching animation costs no sprite-sheet or texture
-work.
+time-based frame on the game-over screen. `render` skips the formation during
+attract mode because the near-opaque attract panel would otherwise let slivers
+of it show past the panel edges. The two frames come from `SpriteArt.frames`,
+so the marching animation costs no sprite-sheet or texture work.
