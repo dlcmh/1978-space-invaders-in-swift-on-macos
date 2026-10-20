@@ -10,6 +10,7 @@ file. When dates are equal, the most recently added question comes first.
 
 | Question | Last updated | Covers |
 | --- | --- | --- |
+| [How does SpaceInvadersChecks work, and how does it know which parts of SpaceInvadersCore to run?](how-spaceinvaderschecks-works.md) | 2026-10-20 | Top-level execution, the three layers that select code, the black-box public-API constraint, and what the suite does not cover |
 | [When does the check suite run, and why then?](when-the-check-suite-runs.md) | 2026-10-20 | Top-level execution in the checks executable, the gate's four stages, first-failure semantics, and why it is not XCTest |
 | [What do "simulation" and "presentation" mean?](simulation-and-presentation.md) | 2026-10-20 | The two halves, what each owns, the one-way command and event arrows, ambiguous cases, and how to classify a change |
 | [How do I tell whether the game's CPU and memory use is acceptable?](judging-cpu-and-memory-use.md) | 2026-10-20 | The 60 Hz frame budget, why rendering dominates CPU, what holds the 150 MB, and the stability, scaling, and frame-rate checks that decide it |
