@@ -10,6 +10,7 @@ file. When dates are equal, the most recently added question comes first.
 
 | Question | Last updated | Covers |
 | --- | --- | --- |
+| [What do "simulation" and "presentation" mean?](simulation-and-presentation.md) | 2026-10-20 | The two halves, what each owns, the one-way command and event arrows, ambiguous cases, and how to classify a change |
 | [How do I tell whether the game's CPU and memory use is acceptable?](judging-cpu-and-memory-use.md) | 2026-10-20 | The 60 Hz frame budget, why rendering dominates CPU, what holds the 150 MB, and the stability, scaling, and frame-rate checks that decide it |
 | [How is SpaceInvadersCore structured, and why is the simulation headless?](spaceinvaderscore-architecture.md) | 2026-10-20 | The core/presentation boundary, commands, read-only state, phases, and deterministic RNG |
 | [How does the invader formation march, and why does it speed up?](invader-march-and-acceleration.md) | 2026-10-20 | Formation stepping, edge drops, the acceleration formula, and wave tempo |
