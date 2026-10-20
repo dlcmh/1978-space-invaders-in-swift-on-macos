@@ -9,7 +9,7 @@ governance document. The **Original request** block below is immutable.
 - **Commissioned by:** David Chin ([@dlcmh](https://github.com/dlcmh))
 - **Commissioned:** 2026-10-20 15:27:30 (+08:00, Asia/Kuala_Lumpur)
 - **Delivery agent:** DeepSeek Harness (deepseek-flash)
-- **Initial implementation commit:** recorded in the repository history
+- **Initial implementation commit:** `377c364e35d5b0ab93bbef1d1174257179f4fcad`
 - **Initial public version:** 1.0
 
 ## Original request
